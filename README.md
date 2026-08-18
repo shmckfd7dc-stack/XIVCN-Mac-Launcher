@@ -37,23 +37,23 @@
 ## 界面预览
 
 <p align="center">
-  <img src="docs/screenshots/ui-light-onboarding.png" alt="浅色引导界面" width="48%">
-  <img src="docs/screenshots/ui-light-dalamud.png" alt="浅色 Dalamud 设置" width="48%">
+  <img src="docs/screenshots/ui-light-onboarding.png" alt="UI 1-1" width="48%">
+  <img src="docs/screenshots/ui-light-dalamud.png" alt="UI 1-2" width="48%">
 </p>
 
 <p align="center">
-  <img src="docs/screenshots/ui-light-onboarding.png" alt="浅色引导界面" width="48%">
-  <img src="docs/screenshots/ui-light-dalamud.png" alt="浅色 Dalamud 设置" width="48%">
+  <img src="docs/screenshots/ui-light-onboarding.png" alt="UI 2-1" width="48%">
+  <img src="docs/screenshots/ui-light-dalamud.png" alt="浅UI 2-2" width="48%">
 </p>
 
 <p align="center">
-  <img src="docs/screenshots/ui-light-onboarding.png" alt="浅色引导界面" width="48%">
-  <img src="docs/screenshots/ui-light-dalamud.png" alt="浅色 Dalamud 设置" width="48%">
+  <img src="docs/screenshots/ui-light-onboarding.png" alt="UI 3-1" width="48%">
+  <img src="docs/screenshots/ui-light-dalamud.png" alt="UI 3-2" width="48%">
 </p>
 
 <p align="center">
-  <img src="docs/screenshots/ui-light-onboarding.png" alt="浅色引导界面" width="48%">
-  <img src="docs/screenshots/ui-light-dalamud.png" alt="浅色 Dalamud 设置" width="48%">
+  <img src="docs/screenshots/ui-light-onboarding.png" alt="UI 4-1" width="48%">
+  <img src="docs/screenshots/ui-light-dalamud.png" alt="UI 4-2" width="48%">
 </p>
 
 界面支持跟随系统自动切换浅色与深色模式，也可以在启动器内单独选择外观模式。预览图仅用于展示界面布局和交互结构，不包含账号信息或本地文件路径。
