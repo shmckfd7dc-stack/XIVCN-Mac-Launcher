@@ -14,7 +14,7 @@
   <a href="https://github.com/shmckfd7dc-stack/XIVCN-Mac-Launcher/blob/main/NOTICE"><img src="https://img.shields.io/badge/license-see%20NOTICE-informational" alt="License"></a>
 </p>
 
-`FF14 国服 Mac 启动器 是一款面向 Apple Silicon Mac 的最终幻想 XIV 国服启动器。项目将账号登录、游戏文件管理、运行环境配置、游戏启动以及可选的 Dalamud 国服/Soil（土月） 注入功能整合到一个原生 macOS 启动器中，为国服玩家提供完整的游戏启动与维护流程。 
+`FF14 国服 Mac 启动器` 是一款面向 Apple Silicon Mac 的最终幻想 XIV 国服启动器。项目将账号登录、游戏文件管理、运行环境配置、游戏启动以及可选的 Dalamud 国服/Soil（土月） 注入功能整合到一个原生 macOS 启动器中，为国服玩家提供完整的游戏启动与维护流程。 
 
 当前发布基线为 `XIVCN Mac Launcher 1.0.0`。
 
