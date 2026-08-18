@@ -14,7 +14,7 @@
   <a href="https://github.com/shmckfd7dc-stack/XIVCN-Mac-Launcher/blob/main/NOTICE"><img src="https://img.shields.io/badge/license-see%20NOTICE-informational" alt="License"></a>
 </p>
 
-`FF14 国服 Mac 启动器` 是一款面向 Apple Silicon Mac 的最终幻想 XIV 国服启动器。项目将账号登录、游戏文件管理、运行环境配置、游戏启动以及可选的 Dalamud 国服/Soil（土月） 注入功能整合到一个原生 macOS 启动器中，为国服玩家提供完整的游戏启动与维护流程。 
+`FF14 国服 Mac 启动器` 是一款面向 Apple Silicon Mac 的最终幻想 XIV 国服启动器。项目将账号登录、文件管理、在线下载&更新、运行环境配置、游戏启动以及可选的双 Dalamud 国服/Soil（土月） 注入功能整合到一个原生 macOS 启动器中，为国服Mac玩家提供完整的游戏启动与维护流程。 
 
 当前发布基线为 `XIVCN Mac Launcher 1.0.0`。
 
@@ -70,7 +70,7 @@
 - 支持国服游戏来源选择、版本检查、更新和用户主动发起的完整性修复
 - 支持直接启动游戏，或选择 Dalamud 国服 / Soil（土月）后启动
 - 支持 Dalamud 下载、版本更新、插件目录管理、清理以及不同变体的运行环境隔离
-- 使用 XOM 5.4.2 Wine、DXMT-only 和 Modern MoltenVK 运行环境
+- 使用 XOM 5.4.2 Wine、DXMT 运行环境，并支持运组件同步上游更新
 - 支持 MetalFX（实验性）、Retina、MSync、键盘映射和超域旅行等功能
 - 使用原生 SwiftUI 构建 macOS 界面，Core Bridge 通过 Rosetta 提供登录和游戏启动能力。
 
@@ -120,7 +120,7 @@ docs/licenses/             运行时与上游许可说明
 - 以 `XIVCN Mac Launcher 1.0.0` 为当前基线，修改功能前优先补充或确认相关测试。
 - 优先复用现有 Core Bridge、更新器和状态流，不重复实现另一套后端。
 - 日常检查保持轻量，完整扫描仅在用户主动执行时进行。
-- 不将账号信息、Token、Keychain 内容、用户本地路径或运行日志提交到源码仓库。
+- 不将账号信息、Keychain 内容、用户本地路径或运行日志提交到源码仓库。
 - Wine、DXMT、Core 组件及发行源发生变更时，应记录对应的来源、版本和哈希，并进行实际运行验证。
 
 
@@ -133,10 +133,10 @@ Release 包含最终 DMG；源码仓库不包含本地维护交接材料及离�
 ## 注意事项
 
 - 本启动器已在国服版本 `2026.8.5` 上完成实际测试，游戏启动和 Dalamud 注入均正常。
-- 游戏下载功能尚未完成首次下载的实际测试。目前使用的是本地已有的游戏文件进行验证。后续维护时应单独测试首次下载、取消、下载失败恢复以及重新启动等流程。
-- MetalFX 动态超分目前属于实验性功能。MetalHUD 对动态超分状态的读取和显示存在已知 Bug，但实际动态超分功能已确认可以正常生效，判断功能是否生效应以实际游戏表现和 FPS 变化为准。
-- 游戏内 DLSS 选项显示为灰色且无法选择属于正常情况。FF14 实际使用的是转译层提供的动态超分机制，该选项状态不代表动态超分功能失效。
-- 如果动态超分未正常激活，可以在设置中先选择“低于 60 FPS 时启用”并保存，再切换为“一直启用”并保存。进入游戏后移动角色或晃动视角，观察 FPS 是否出现明显变化。
+- 游戏在线下载功能尚未完成实际测试。目前使用的是本地已有的游戏文件进行验证。后续维护时应单独测试在线下载、取消、下载失败以及重新启动等流程。
+- MetalFX 动态超分目前属于实验性功能。MetalHUD 对动态超分状态的读取和显示存在 Bug，但实际动态超分功能已确认正常生效，判断功能是否生效应以实际游戏表现和 FPS 变化为准。
+- 游戏内 DLSS 选项显示为灰色且无法选择属于正常现象。FF14 实际使用的是转译层提供的动态超分机制，该选项状态不代表动态超分功能失效。
+- 如果动态超分未正常激活，可以进入游戏后，先在设置中先选择“低于 60 FPS 时启用”并保存，再切换为“一直启用”并保存，后移动角色或晃动视角，观察 FPS 是否出现明显变化。
 - 仅支持 Apple Silicon Mac 和 macOS 26 及以上版本，不支持 Intel Mac。
 
 
@@ -144,13 +144,14 @@ Release 包含最终 DMG；源码仓库不包含本地维护交接材料及离�
 
 项目只列出实际参与构建、运行时来源或代码/协议参考的项目：
 
-- [XIVLauncherCN](https://github.com/ottercorp/FFXIVQuickLauncher)：登录、游戏启动和国服运行组件参考；运行组件发布目录为 [file.bluefissure.com/FFXIV/Dalamud/xlcore/macos](https://file.bluefissure.com/FFXIV/Dalamud/xlcore/macos)。
+- [XIVLauncherCN](https://github.com/ottercorp/FFXIVQuickLauncher)：登录、游戏启动和国服运行组件参考。
+- [file.bluefissure.com/FFXIV/Dalamud/xlcore/macos](https://file.bluefissure.com/FFXIV/Dalamud/xlcore/macos)：Mac启动器逻辑参考。
 - [XIVLauncherCN 6.8.0-2](https://github.com/ottercorp/FFXIVQuickLauncher/releases/tag/6.8.0-2)：国服 Dalamud 注入与发行流程参考。
 - [AtmoOmen/FFXIVQuickLauncher](https://github.com/AtmoOmen/FFXIVQuickLauncher)：Dalamud Soil（土月）变体的运行与发行参考。
-- [Dalamud](https://github.com/goatcorp/Dalamud)：插件运行时架构和协议参考；国服发行资源使用项目配置的中国大陆发行源。
-- [XIV on Mac](https://github.com/marzent/XIV-on-Mac)：macOS Wine、Metal、HiDPI 和 XOM 运行时参考；当前 App 使用固定版本的 XOM Wine/DXMT 运行时输入。
-- [DXMT](https://github.com/3Shain/dxmt)：Direct3D 11/DXGI 到 Metal 的转换组件，当前产品使用 DXMT-only 路径。
-- 国服相关登录、Dalamud 和发行源行为参考了 `UPSTREAMS.json` 中列出的 China launcher 项目；这些项目不属于本仓库的原创代码，也不作为本项目的产品名称或作者声明。
+- [Dalamud](https://github.com/goatcorp/Dalamud)：插件运行时架构和协议参考；国服发行资源使用项目配置的发行源。
+- [XIV on Mac](https://github.com/marzent/XIV-on-Mac)：macOS Wine、Metal、HiDPI 和 XOM 运行时参考；当前版本使用固定版本的 XOM Wine/DXMT。
+- [DXMT](https://github.com/3Shain/dxmt)：Direct3D 11/DXGI 到 Metal 的转换组件仅供参考，当前版本使用 DXMT-only 路径及上游 XOM的版本。
+- 国服相关登录、Dalamud 和发行源行为参考了 `UPSTREAMS.json` 中列出的 China launcher 项目；这些项目不属于本仓库的原创代码。
 
 
 ## 许可
