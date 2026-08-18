@@ -156,4 +156,4 @@ Release 包含最终 DMG；源码仓库不包含本地维护交接材料及离�
 
 ## 许可
 
-本项目及其依赖的来源和许可证见 [`NOTICE`](NOTICE)、[`docs/licenses`](docs/licenses) 以及各上游源码目录中的许可证文件。
+本项目及其依赖的来源和许可证见 [`docs/licenses`](docs/licenses) 以及各上游源码目录中的许可证文件。
