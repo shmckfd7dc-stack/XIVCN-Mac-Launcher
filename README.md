@@ -70,7 +70,7 @@
 - 支持国服游戏来源选择、版本检查、更新和 完整性修复
 - 支持直接启动游戏，或选择 Dalamud 国服 / Soil（土月）后启动
 - 支持 Dalamud 下载、版本更新、插件目录管理、清理以及不同变体的运行环境隔离
-- 使用 XOM 5.4.2 Wine、DXMT 运行环境，并支持运组件同步上游更新
+- 使用 XOM 5.4.2 Wine、DXMT 运行环境，并支持组件同步上游更新
 - 支持 MetalFX（实验性）、Retina、MSync、键盘映射和超域旅行等功能
 - 使用原生 SwiftUI 构建 macOS 界面，Core Bridge 通过 Rosetta 提供登录和游戏启动能力。
 
