@@ -14,22 +14,34 @@
   <a href="https://github.com/shmckfd7dc-stack/XIVCN-Mac-Launcher/blob/main/NOTICE"><img src="https://img.shields.io/badge/license-see%20NOTICE-informational" alt="License"></a>
 </p>
 
-`FF14 国服 Mac 启动器` 是面向 Apple Silicon Mac 的最终幻想 XIV 中国大陆国服启动器。项目使用原生 SwiftUI 界面，提供账号登录、游戏启动、游戏版本更新、外部游戏管理，以及可选的 Dalamud 国服/Soil 注入。
+`FF14 国服 Mac 启动器` 是面向 Apple Silicon Mac 的最终幻想 XIV 中国大陆国服启动器。它把账号登录、游戏维护、外部游戏管理、图形运行时和可选的 Dalamud 国服/Soil 注入整合在一套原生 macOS 工作流中。
 
 当前发布基线为 `XIVCN Mac Launcher 1.0.0`。
 
 ## 设计概览
 
-项目采用偏工具型的现代 macOS 界面：主页面集中展示账号、游戏来源、当前运行状态和启动动作；设置按通用、图形、账号、游戏、Dalamud 和高级能力分组，避免把 Runtime 细节暴露给普通用户。
+项目采用偏工具型的现代 macOS 界面：主页面集中展示身份、游戏来源、当前运行状态和启动动作；设置按通用、图形、账号、游戏、Dalamud 和高级能力分组，让常用操作保持清晰、可扫描。
 
-核心流程保持状态驱动：游戏和 Dalamud 的版本检查、下载、校验、激活、注入与退出均由统一状态流管理；国服 Dalamud 和 Soil 使用相互隔离的运行目录，用户只选择一个变体进行注入。MetalFX、Retina、MSync 和键盘映射等图形能力通过现有设置进入启动链路，不额外维护第二套启动器。
+核心流程保持状态驱动：游戏和 Dalamud 的版本检查、下载、校验、激活、注入与退出均由统一状态流管理；国服 Dalamud 和 Soil 使用相互隔离的运行目录，用户选择需要的变体后即可进入对应流程。MetalFX、Retina、MSync 和键盘映射等图形能力通过现有设置进入启动链路。
 
 ## UI 设计
 
 - 使用原生 SwiftUI 构建，遵循 macOS 原生窗口、侧栏导航、Material 材质和控件交互习惯。
 - 支持跟随系统自动切换浅色/深色，也支持启动器内的外观模式选择；面板、侧栏和状态色会同步适配当前色调。
-- 主页面围绕账号、游戏来源、启动动作和运行状态组织信息，设置按功能分组，减少普通用户接触运行时细节。
+- 主页面围绕身份、游戏来源、启动动作和运行状态组织信息，设置按任务分组，保持信息层级稳定。
 - 下载、更新、完整性检查、注入和重置使用统一的状态反馈与轻量动画，并为进度和主要控件提供辅助功能标签。
+
+## 界面预览
+
+<p align="center">
+  <img src="docs/screenshots/ui-light-onboarding.png" alt="浅色引导界面" width="48%">
+  <img src="docs/screenshots/ui-light-dalamud.png" alt="浅色 Dalamud 设置" width="48%">
+</p>
+<p align="center">
+  <img src="docs/screenshots/ui-dark-overview.png" alt="深色侧栏与状态面板" width="72%">
+</p>
+
+界面支持跟随系统自动切换浅色与深色，也可以在启动器内选择外观模式。预览图仅用于展示布局和交互层级，不包含账号或本地路径信息。
 
 ## 功能
 
@@ -50,7 +62,7 @@
 
 ## 构建与测试
 
-源码仓库只保存项目代码、测试和构建脚本。固定 .NET SDK、XOM/DXMT 构建资源和离线复现材料位于配套维护交接包中，避免把大型运行时二进制直接提交到 Git 历史。
+源码仓库聚焦可审阅的项目代码、测试、构建脚本和必要文档；固定 .NET SDK、XOM/DXMT 构建资源和离线复现材料由配套维护交接包提供。
 
 在完整维护环境的项目目录执行：
 
@@ -108,8 +120,6 @@ docs/licenses/             运行时与上游许可说明
 - [DXMT](https://github.com/3Shain/dxmt)：Direct3D 11/DXGI 到 Metal 的转换组件，当前产品使用 DXMT-only 路径。
 - 国服相关登录、Dalamud 和发行源行为参考了 `UPSTREAMS.json` 中列出的 China launcher 项目；这些项目不属于本仓库的原创代码，也不作为本项目的产品名称或作者声明。
 
-详细许可证文本和第三方归属见 [`NOTICE`](NOTICE) 与 [`docs/licenses`](docs/licenses)。
-
-## 许可与来源
+## 许可
 
 本项目及其依赖的来源和许可证见 [`NOTICE`](NOTICE)、[`docs/licenses`](docs/licenses) 以及各上游源码目录中的许可证文件。
