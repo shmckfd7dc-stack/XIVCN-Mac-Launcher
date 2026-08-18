@@ -55,7 +55,7 @@
 - 支持 Dalamud 下载、版本更新、插件目录管理、清理以及不同变体的运行环境隔离
 - 使用 XOM 5.4.2 Wine、DXMT-only 和 Modern MoltenVK 运行环境
 - 支持 MetalFX（实验性）、Retina、MSync、键盘映射和超域旅行等功能
-- 使用原生 SwiftUI 构建 macOS 界面，为登录和游戏启动提供兼容支持
+- 使用原生 SwiftUI 构建 macOS 界面，Core Bridge 通过 Rosetta 提供登录和游戏启动能力。
 
 
 ## 运行要求
@@ -105,6 +105,12 @@ docs/licenses/             运行时与上游许可说明
 - 日常检查保持轻量，完整扫描仅在用户主动执行时进行。
 - 不将账号信息、Token、Keychain 内容、用户本地路径或运行日志提交到源码仓库。
 - Wine、DXMT、Core 组件及发行源发生变更时，应记录对应的来源、版本和哈希，并进行实际运行验证。
+
+
+## 发布
+
+正式版本通过 GitHub Release 发布。
+Release 包含最终 DMG；源码仓库不包含本地维护交接材料及离线复现资源。
 
 
 ## 注意事项
