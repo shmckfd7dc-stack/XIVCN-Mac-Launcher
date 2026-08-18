@@ -93,7 +93,9 @@ docs/licenses/             运行时与上游许可说明
 
 项目只列出实际参与构建、运行时来源或代码/协议参考的项目：
 
-- [XIVLauncher / FFXIVQuickLauncher](https://github.com/goatcorp/FFXIVQuickLauncher)：登录、游戏启动和 Dalamud 运行流程参考。
+- [XIVLauncherCN](https://github.com/ottercorp/FFXIVQuickLauncher)：登录、游戏启动和国服运行组件参考；运行组件发布目录为 [file.bluefissure.com/FFXIV/Dalamud/xlcore/macos](https://file.bluefissure.com/FFXIV/Dalamud/xlcore/macos)。
+- [XIVLauncherCN 6.8.0-2](https://github.com/ottercorp/FFXIVQuickLauncher/releases/tag/6.8.0-2)：国服 Dalamud 注入与发行流程参考。
+- [AtmoOmen/FFXIVQuickLauncher](https://github.com/AtmoOmen/FFXIVQuickLauncher)：Dalamud Soil（土月）变体的运行与发行参考。
 - [Dalamud](https://github.com/goatcorp/Dalamud)：插件运行时架构和协议参考；国服发行资源使用项目配置的中国大陆发行源。
 - [XIV on Mac](https://github.com/marzent/XIV-on-Mac)：macOS Wine、Metal、HiDPI 和 XOM 运行时参考；当前 App 使用固定版本的 XOM Wine/DXMT 运行时输入。
 - [DXMT](https://github.com/3Shain/dxmt)：Direct3D 11/DXGI 到 Metal 的转换组件，当前产品使用 DXMT-only 路径。
