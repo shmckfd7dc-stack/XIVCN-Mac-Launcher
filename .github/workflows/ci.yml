@@ -1,0 +1,15 @@
+name: Build macOS launcher
+on:
+  push:
+  pull_request:
+jobs:
+  build:
+    runs-on: macos-26
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate CN endpoints
+        run: sh scripts/validate-cn-config.sh
+      - name: Build arm64 Release
+        run: swift build -c release
+      - name: Run core tests
+        run: swift test

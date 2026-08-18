@@ -1,0 +1,11 @@
+DXMT attribution
+================
+
+Project: DXMT
+Source: https://github.com/3Shain/dxmt
+Copyright: Copyright (c) 2023-2026 Feifan He for CodeWeavers
+License: GNU Lesser General Public License 2.1 or any later version
+
+FFXIV CN MAC uses the DXMT binaries carried by the pinned XIV on Mac runtime
+base. The complete LGPL-2.1 license text is included as LGPL-2.1.txt. This
+project does not claim authorship of DXMT.

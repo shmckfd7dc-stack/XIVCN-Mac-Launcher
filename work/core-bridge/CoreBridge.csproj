@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <RuntimeIdentifier>osx-x64</RuntimeIdentifier>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>XIVLauncherCN.CoreBridge</AssemblyName>
+    <RootNamespace>XIVLauncherCN.CoreBridge</RootNamespace>
+    <OldCoreRoot Condition="'$(OldCoreRoot)' == ''">$(MSBuildThisFileDirectory)../../../../legacy-core/original-bundle</OldCoreRoot>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="XIVLauncher.Common">
+      <HintPath>$(OldCoreRoot)/XIVLauncher.Common.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="XIVLauncher.Common.Unix">
+      <HintPath>$(OldCoreRoot)/XIVLauncher.Common.Unix.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <!-- Common loads the shared DeviceId assembly through the old Core
+         dependency graph. Keep it explicit so .deps.json carries the
+         runtime asset when the source-built bundle is published. -->
+    <Reference Include="DeviceId">
+      <HintPath>$(OldCoreRoot)/DeviceId.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,11 @@
+XIVCN Mac Launcher 安装与卸载
+
+安装：
+将“XIVCN Mac Launcher.app”拖入 Applications。
+
+完整卸载：
+请先在 XIVCN Mac Launcher 中打开“高级” -> “卸载数据”，选择“移除所有启动器数据”。
+该操作会精确删除本项目创建的 Keychain 条目、设置、Runtime、缓存、日志和启动器管理的游戏。
+用户指定的外部游戏不会被删除。
+
+仅把 App 拖入废纸篓不会自动删除 macOS Keychain 或用户数据，重新安装后这些数据仍可能存在。

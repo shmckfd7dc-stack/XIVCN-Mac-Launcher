@@ -1,0 +1,17 @@
+name: Monitor reviewed upstreams
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "23 3 * * *"
+
+permissions:
+  contents: read
+
+jobs:
+  compare:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compare upstream revisions
+        run: sh scripts/check-upstreams.sh

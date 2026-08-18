@@ -1,0 +1,19 @@
+FF14 国服 Mac 启动器
+
+本项目是面向 Apple Silicon macOS 的 FFXIV 中国大陆国服启动器。项目中的登录、游戏启动、Dalamud、Wine、Metal 和 DXMT 相关代码或资源可能基于、链接到或参考以下上游项目；本项目不声称拥有这些上游项目的原始著作权。
+
+上游来源
+---------
+
+- XIVLauncher / FFXIVQuickLauncher：登录、游戏启动和 Dalamud 相关参考
+  https://github.com/goatcorp/FFXIVQuickLauncher
+- Dalamud：插件运行时与相关协议参考
+  https://github.com/goatcorp/Dalamud
+- XIV on Mac：Wine、macOS、Metal 和 HiDPI 运行时参考
+  https://github.com/marzent/XIV-on-Mac
+- DXMT：Direct3D 11 到 Metal 的转换组件
+  https://github.com/3Shain/dxmt
+
+各上游的许可证文本和本项目随 App 使用的第三方许可说明见 `docs/licenses` 及维护交接包。发布新的运行时二进制前，应依据实际打包内容重新核对对应许可证和来源要求。
+
+本项目不在源码中保存账号、Token、Keychain 数据、个人路径、私有密钥或运行日志。
