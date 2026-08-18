@@ -32,7 +32,7 @@
 - Dalamud 下载、版本更新、插件目录、清理和变体隔离
 - XOM 5.4.2 Wine、DXMT-only、Modern MoltenVK 图形路径
 - MetalFX、Retina、MSync、键盘映射和超域旅行设置
-- Apple Silicon 原生 UI，Core Bridge 通过 Rosetta 运行旧 Core 的登录和启动能力
+- Apple Silicon 原生 UI，Core Bridge 通过 Rosetta 提供登录和启动能力
 
 ## 运行要求
 
@@ -43,7 +43,7 @@
 
 ## 构建与测试
 
-源码仓库只保存项目代码、测试和构建脚本。旧 Core 源码、固定 .NET SDK、XOM/DXMT 构建资源和离线复现材料位于配套维护交接包中，避免把大型运行时二进制直接提交到 Git 历史。
+源码仓库只保存项目代码、测试和构建脚本。固定 .NET SDK、XOM/DXMT 构建资源和离线复现材料位于配套维护交接包中，避免把大型运行时二进制直接提交到 Git 历史。
 
 在完整维护环境的项目目录执行：
 
@@ -78,7 +78,7 @@ docs/licenses/             运行时与上游许可说明
 - 复用现有 Core Bridge、更新器和状态流，不重复实现第二套后端。
 - 日常检查保持轻量，完整扫描只在用户主动触发时执行。
 - 不把账号、Token、Keychain 内容、用户路径或运行日志提交到仓库。
-- Wine、DXMT、旧 Core 和发行源变更必须记录来源、版本、哈希并进行实机验证。
+- Wine、DXMT、Core 组件和发行源变更必须记录来源、版本、哈希并进行实机验证。
 
 ## 注意事项
 
@@ -93,7 +93,7 @@ docs/licenses/             运行时与上游许可说明
 
 项目只列出实际参与构建、运行时来源或代码/协议参考的项目：
 
-- [XIVLauncher / FFXIVQuickLauncher](https://github.com/goatcorp/FFXIVQuickLauncher)：旧 Core 的登录、游戏启动和 Dalamud 运行流程参考。
+- [XIVLauncher / FFXIVQuickLauncher](https://github.com/goatcorp/FFXIVQuickLauncher)：登录、游戏启动和 Dalamud 运行流程参考。
 - [Dalamud](https://github.com/goatcorp/Dalamud)：插件运行时架构和协议参考；国服发行资源使用项目配置的中国大陆发行源。
 - [XIV on Mac](https://github.com/marzent/XIV-on-Mac)：macOS Wine、Metal、HiDPI 和 XOM 运行时参考；当前 App 使用固定版本的 XOM Wine/DXMT 运行时输入。
 - [DXMT](https://github.com/3Shain/dxmt)：Direct3D 11/DXGI 到 Metal 的转换组件，当前产品使用 DXMT-only 路径。
