@@ -145,7 +145,7 @@ Release 包含最终 DMG；源码仓库不包含本地维护交接材料及离�
 项目只列出实际参与构建、运行时来源或代码/协议参考的项目：
 
 - [XIVLauncherCN](https://github.com/ottercorp/FFXIVQuickLauncher)：登录、游戏启动和国服运行组件参考。
-- [file.bluefissure.com/FFXIV/Dalamud/xlcore/macos](https://file.bluefissure.com/FFXIV/Dalamud/xlcore/macos)：Mac启动器逻辑参考。
+- [file.bluefissure.com/FFXIV/Dalamud/xlcore/macos](https://file.bluefissure.com/FFXIV/Dalamud/xlcore/macos)：macOS 国服启动/登录逻辑等参考。
 - [XIVLauncherCN 6.8.0-2](https://github.com/ottercorp/FFXIVQuickLauncher/releases/tag/6.8.0-2)：国服 Dalamud 注入与发行流程参考。
 - [AtmoOmen/FFXIVQuickLauncher](https://github.com/AtmoOmen/FFXIVQuickLauncher)：Dalamud Soil（土月）变体的运行与发行参考。
 - [Dalamud](https://github.com/goatcorp/Dalamud)：插件运行时架构和协议参考；国服发行资源使用项目配置的发行源。
