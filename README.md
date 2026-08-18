@@ -110,10 +110,6 @@ docs/licenses/             运行时与上游许可说明
 
 详细许可证文本和第三方归属见 [`NOTICE`](NOTICE) 与 [`docs/licenses`](docs/licenses)。
 
-## 发布
-
-最终 DMG 作为 GitHub Release Asset 发布，不提交到 Git 历史。发布包应包含 SHA-256，版本标签使用 `v1.0.0`。
-
 ## 许可与来源
 
 本项目及其依赖的来源和许可证见 [`NOTICE`](NOTICE)、[`docs/licenses`](docs/licenses) 以及各上游源码目录中的许可证文件。
